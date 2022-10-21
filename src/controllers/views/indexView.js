@@ -14,6 +14,8 @@ module.exports = {
 
         if(translate) abrevLang = translate.substr(translate.length - 2, translate.length)
 
+        const name = infos.name[translate] || infos.name[translate].pt_BR
+
 
         const description = infos.description[translate] || infos.description.pt_BR
 
@@ -49,7 +51,7 @@ module.exports = {
 
         console.log(`especificações`, files)
         return res.render('pages/index', {
-            title: 'Jacto',
+            title: name,
             infos,
             description: description,
             translate: translate || 'pt_BR',
