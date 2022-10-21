@@ -1,0 +1,69 @@
+<header class="top-main">
+
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <div class="logo"></div>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#infos" class="nav-link px-2 link-secondary">Informações</a></li>
+          <li><a href="#specs" class="nav-link px-2 link-dark">Especificações</a></li>
+          <li><a href="#related" class="nav-link px-2 link-dark">Relacionados</a></li>
+          <li><a href="#more" class="nav-link px-2 link-dark">Mais informações</a></li>
+        </ul>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle language-select" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="image-language">{{abrevLang}}</div>
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
+            <li><a class="dropdown-item" href="/pt_BR">pt_BR</a></li>
+            <li><a class="dropdown-item" href="/en_GB">en_GB</a></li>
+            <li><a class="dropdown-item" href="/en_US">en_US</a></li>
+            <li><a class="dropdown-item" href="/es_AR">es_AR</a></li>
+            <li><a class="dropdown-item" href="/es_ES">es_ES</a></li>
+            <li><a class="dropdown-item" href="/fr_FR">fr_FR</a></li>
+            <li><a class="dropdown-item" href="/ru_RU">ru_RU</a></li>
+            <li><a class="dropdown-item" href="/th_TH">th_TH</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="titleProduct">
+        <h4>Pulverizadores costais</h4>
+
+        <p>{{{description}}}</p>
+    </div>
+
+    <div class="top-slides">
+            <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                
+                {{#each infos.gallery}}
+                    {{#if @first}}
+                        <div class="carousel-item active">
+                            <img src="{{url}}" class="d-block w-100" alt="...">
+                        </div>
+                    {{else}}
+                        <div class="carousel-item">
+                            <img src="{{url}}" class="d-block w-100" alt="...">
+                        </div>
+                    {{/if}}
+                    
+                {{/each}}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        
+    </div>
+</header>

@@ -1,0 +1,62 @@
+.blockInfo__container
+    .blockInfo
+        display flex
+        flex-direction column
+        margin-top 100px
+
+        h2
+            font-family 'Playfair Display Bold', sans-serif
+            font-size 32px
+            font-weight: 700
+            color: #093624;
+            margin-bottom 50px
+            position relative
+
+            &:before
+                content ''
+                width 59px
+                border-bottom: 3px solid #BECEC7
+                position absolute
+                left 0
+                bottom -20px
+
+        .blocks
+            display flex
+            justify-content space-between
+
+            @media  screen and (max-width 766px)
+                flex-direction column
+
+            > div
+                flex 0 0 calc(33.333333333% - 30px)
+                max-width calc(33.333333333% - 30px)
+                transition all .2s linear
+
+                @media  screen and (max-width 766px)
+                    
+                    flex 0 0 100%
+                    max-width 100%
+                    margin-bottom 40px
+
+                &:hover
+                    transform translateY(-5px)
+
+                h4
+                    font-family Montserrat
+                    font-size 16px
+                    font-weight: 700
+                    color: #093624;
+                    margin 10px 0
+
+                p
+                    font-family Montserrat
+                    font-size 14px
+                    font-weight 400
+
+                figure
+                    width 100%
+                    overflow hidden
+                    border-radius 8px
+                    
+                    img
+                        width 100%

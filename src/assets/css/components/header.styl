@@ -1,0 +1,41 @@
+.top-slides
+    height 800px
+    overflow hidden
+    position absolute
+    top 0
+    left 0
+    width 100%
+    opacity .5
+    z-index 1
+
+    @media  screen and (max-width 766px)
+        height 196px
+
+    .interval
+        position absolute
+        width 100%
+        left 0
+        top 50%
+        transform translateY(-50%)
+
+.language-select
+    display flex !important
+    justify-content: center
+    align-items center
+
+    &:after
+        border-top: 0.3em solid #fff
+    img
+        display none
+
+    .image-language
+        display flex
+        
+        width 32px 
+        height 32px
+        background: linear-gradient(130.41deg, #1F8058 -48.15%, #0D4A31 64.12%)
+        color #fff
+        justify-content: center
+        align-items: center
+        font-size 11px
+        border-radius 50%

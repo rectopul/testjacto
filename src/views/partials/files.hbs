@@ -1,0 +1,22 @@
+<article class="container container_files" id="more">
+    <div class="row">
+        <h2>Mais informações</h2>
+    </div>
+
+    <div class="row">
+
+        {{#each files}}
+        <div class="col-6 col-md-4">
+
+            <div class="item">
+                <h4>{{name}}</h4>
+
+                <a href="{{file.url}}">
+                    <i class="fileIcon"></i>
+                </a>
+            </div>
+            
+        </div>
+        {{/each}}
+    </div>
+</article>

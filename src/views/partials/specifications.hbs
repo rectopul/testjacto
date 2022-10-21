@@ -1,0 +1,37 @@
+<div class="container container_specifications" id="specs">
+
+    <div class="row">
+        <div class="col-12 col-md-6 text">
+            <h2>Especificações</h2>
+
+            <p>
+                Informações principais do produto. Todas as informações que você precisa para acompanhar de perto o nosso produto
+            </p>
+        </div>
+
+        <div class="col-12 col-md-6 blockSpecifications">
+            <div class="row">
+                {{#each specifications}}
+                <div class="col-12 col-md-6 block-container">
+                    <h3>{{title}}</h3>
+
+                    <div class="row blocks">
+                        {{#each items}}
+                        <div class="col-6">
+                            <div class="item text-center">
+                                <span>{{title}}</span>
+                                <p>{{description}}</p>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            
+        </div>
+    </div>
+    
+
+    
+</div>

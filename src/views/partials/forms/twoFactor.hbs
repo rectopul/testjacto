@@ -1,0 +1,51 @@
+<div class="main-form">
+
+    {{#if error}}
+    <form action="" class="main-form-login send-error-login">
+    {{else}}
+    <form action="" class="default-form twoFactorForm">
+    {{/if}}
+
+        <header class="main-form-login__header">
+            <h2>Login with 2FA</h2>
+        </header>
+
+        
+
+        {{#if client}}<input type="hidden" name="id" value="{{client.id}}">{{/if}}
+
+        <article class="main-form-login__inputs">
+
+            {{#if error}}
+            <article class="error-messages">
+            <i>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 25 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g id="Ban" fill="none" fill-rule="evenodd" transform="translate(1)"><path id="Shape" d="m4.92893219 4.92893219c3.90524292-3.90524292 10.23689271-3.90524292 14.14213561 0s3.9052429 10.23689271 0 14.14213561-10.23689269 3.9052429-14.14213561 0-3.90524292-10.23689269 0-14.14213561zm13.39192831 2.16594035-11.22598796 11.22598796c3.13839906 2.4417927 7.67751816 2.2204573 10.56198176-.6640062 2.8844635-2.8844636 3.1057989-7.4235827.6640062-10.56198176zm-1.415733-1.41573302c-3.1383991-2.44179268-7.67751825-2.22045727-10.56198175.66400623s-3.10579891 7.42358265-.66400623 10.56198175z" fill="#ffffff" fill-rule="nonzero" data-original="#000000" class=""></path></g></g></svg>
+            </i>
+            Incorrect Credentials. Please try again.
+            </article>
+            {{/if}}
+
+            <span class="main-form-login__login">
+
+                <div class="container-inputs">
+                    <label for="auth">Two-Factor Token</label>
+                    <input type="text" name="auth" id="auth" required="required" onkeypress='validate(event)' pattern="[0-9]{6}">
+                </div>
+                
+            </span>
+
+            <span class="main-form-login__submit">
+                <button>Confirm 2FA code <div class="loading"><span class="loader"></span></div></button>
+            </span>
+
+            <div class="forgotlinks">
+                <a href="">Forgot Password?</a>
+                <a href="">Lost 2FA device?</a>
+            </div>
+
+        </article>
+
+        <footer>
+        </footer>
+    </form>
+</div>
